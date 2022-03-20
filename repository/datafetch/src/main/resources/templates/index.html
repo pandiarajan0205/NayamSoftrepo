@@ -1,0 +1,117 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title>NayamSoft</title>
+<style>
+#transaction {
+	align-items: center;
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	color: #04AA6D;
+	border-radius: 10px;
+	border-collapse: collapse;
+	border: none;
+}
+
+#transaction tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+tr:hover {
+	background-color: rgb(241, 233, 229);
+}
+
+#transaction th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background-color: #04AA6D;
+	color: white;
+}
+
+#transaction td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	color: #04AA6D;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #04AA6D;
+	color: white;
+	text-align: center;
+}
+
+#transaction th, #transaction td {
+	border: none !important
+}
+
+#transaction th:first-child {
+	border-radius: 10px 0 0 0;
+}
+
+#transaction th:last-child {
+	border-radius: 0 10px 0 0 ;
+}
+
+#transactionble tr:last-child td:first-child {
+	border-radius: 0 0 0 10px ;
+}
+
+#transaction tr:last-child td:last-child {
+	border-radius: 0 0 10px 0 ;
+}
+
+#transactionble tr:hover td {
+	background-color: #ddd
+}
+</style>
+</head>
+<body>
+	<div align="center" id="transaction">
+		<strong><h3 align="left">WELCOME...!</h3></strong> <br>
+		<h1 id="transaction">TRANSACTION DETAILS</h1>
+		<br /> <br>
+		<table id="transaction" style="width: 90%">
+			<thead id="transaction">
+				<tr>
+					<th>Id</th>
+					<th>AccountNumber</th>
+					<th>AccountName</th>
+					<th>BankId</th>
+					<th>BankName</th>
+					<th>TransactionId</th>
+					<th>Amount</th>
+					<th>ReceiverAcountNumber</th>
+					<th>RecevierAccountName</th>
+					<th>Status</th>
+					<th>Date</th>
+				</tr>
+			</thead>
+			<tbody id="transation">
+				<tr id="transaction" th:each="transaction : ${listTransactions}">
+					<td th:text="${transaction.id}">id</td>
+					<td th:text="${transaction.accountnumber}">accountnumber</td>
+					<td th:text="${transaction.accountname}">accountname</td>
+					<td th:text="${transaction.bankid}">bankid</td>
+					<td th:text="${transaction.bankname}">bankname</td>
+					<td th:text="${transaction.transactionid}">transactionid</td>
+					<td th:text="${transaction.amount}">amount</td>
+					<td th:text="${transaction.receiveraccountnumber}">receiveracountnumber</td>
+					<td th:text="${transaction.receiveraccountname}">recevieraccountname</td>
+					<td th:text="${transaction.status}">status</td>
+					<td th:text="${transaction.date}">date</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="footer">
+			<p>@NayamSoft</p>
+		</div>
+	</div>
+</body>
+</html>
