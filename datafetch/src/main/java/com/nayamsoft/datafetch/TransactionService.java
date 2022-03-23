@@ -15,17 +15,5 @@ public class TransactionService {
 	public List<Transaction> listAll(){
 		return repo.findAll();
 	}
-	
-	public void save(Transaction transaction) {
-		repo.save(transaction);
-	}
-	
-	public Transaction get(Integer id) {
-		return repo.findById(id).get();
-	}
-	
-	public void delete(Integer id) {
-		repo.deleteById(id);
-	}
 
 }

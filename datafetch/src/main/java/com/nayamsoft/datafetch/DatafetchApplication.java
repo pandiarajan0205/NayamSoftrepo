@@ -9,5 +9,4 @@ public class DatafetchApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DatafetchApplication.class, args);
 	}
-
 }
